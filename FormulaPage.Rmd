@@ -1,0 +1,22 @@
+---
+title: "PSYC 301 Exam Formulas"
+author: "Patrick Bolger, PhD"
+date: "2/2/2021"
+knit: (function(input_file, encoding) {
+  out_dir <- 'docs';
+  rmarkdown::render(input_file,
+ encoding=encoding,
+ output_file=file.path(dirname(input_file), out_dir, 'index.html'))})
+output: 
+  rmdformats::downcute:
+    use_bookdown: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Test Formula
+
+$$\hat{\sigma}=\sqrt{\frac{\sum(x_i=\overline{x})^2}{N-1}}$$
