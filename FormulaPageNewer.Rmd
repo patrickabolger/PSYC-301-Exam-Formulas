@@ -19,7 +19,17 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # PSYC 301
 
+## Exam 1
 
+$$\overline{x}=\frac{1}{N}\sum_{i=1}^N x_i$$
 
+<br/>
 
 $$s=\sqrt{\frac{\sum(x_i-\overline{x})^2}{N-1}}$$
+<br/>
+
+$$s^2=\frac{\sum(x_i-\overline{x})^2}{N-1}$$
+
+<br/>
+
+$$z_i=\frac{(x_i-\overline{x})}{s}$$
