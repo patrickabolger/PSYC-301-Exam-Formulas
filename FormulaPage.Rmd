@@ -1,7 +1,8 @@
 ---
 title: "PSYC 301 Exam Formulas"
+subtitle: "(scroll down for the exam you need)"
 author: "Patrick Bolger, PhD"
-date: "2/2/2021"
+date: "05 March 2021"
 knit: (function(input_file, encoding) {
   out_dir <- 'docs';
   rmarkdown::render(input_file,
@@ -33,3 +34,20 @@ $$s^2=\frac{\sum(x_i-\overline{x})^2}{N-1}$$
 <br/>
 
 $$z_i=\frac{(x_i-\overline{x})}{s}$$
+
+## New to Exam 2
+
+$$x_i=z_i(s)+\overline{x}$$
+
+<br/>
+
+$$SE_{mean}=\frac{\sigma}{\sqrt{N}}\ or\ \frac{SD}{\sqrt{N}}$$
+
+<br/>
+
+$$CI_{95\%}=\overline{X}\pm \bigg(1.96 \times \frac{\sigma}{\sqrt{N}}\bigg)$$
+
+<br/>
+
+$$CI_{99\%}=\overline{X}\pm \bigg(2.58 \times \frac{\sigma}{\sqrt{N}}\bigg)$$
+
