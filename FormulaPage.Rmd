@@ -72,13 +72,13 @@ $$d=\frac{\bar{x}_1-\bar{x}_2}{\sqrt{\frac{s_1^2+s_2^2}{2}}}$$
 
 ### *F*-ratio for a Oneway ANOVA
 
-$$F=\frac{MS_{between}}{MS_{within}}$$
+$$F=\frac{Mean\ Squares_{between}}{Mean\ Squares_{within}}$$
 
 <br/>
 
 
-$$=\frac{SS_b}{df_b}
-\bigg/\frac{SS_w}{df_w}$$
+$$=\frac{Sum\ of\ Squares_{between}}{degrees\ of\ freedom_{between}}
+\bigg/\frac{Sum\ of\ Squares_{within}}{degrees\ of\ freedom_{within}}$$
 
 <br/>
 
