@@ -61,6 +61,29 @@ $$\chi_{goodness\ of\ fit}^2=\sum_{i=1}^k \frac{(O_i-E_i)^2}{E_i}$$
 
 <br/>
 
+### Standard Error of the mean (repeated from above)
+
+$$SE_{mean}=\frac{\sigma}{\sqrt{n}}$$
+
+<br/>
+
+### *z*-test (not the *z*-score, but rather the test)
+
+$$z=\frac{\bar{x}-\mu_0}{SE_{mean}}$$
+<br/>
+
+or
+
+$$z=\frac{\bar{x}-\mu_0}{\sigma/\sqrt{n}}$$
+<br/>
+
+### One-sample *t*-test
+
+$$t=\frac{\bar{x}-\mu_0}{\hat{\sigma}/\sqrt{n}}$$
+or
+
+$$t=\frac{\bar{x}-\mu_0}{s/\sqrt{n}}$$
+
 ### Student's *t*-test
 
 $$t=\frac{\overline{x}_1-\overline{x}_2}{\sqrt{\left[\frac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}\right]\left[\frac{n_1+n_2}{n_1n_2}\right]}}$$
@@ -89,6 +112,26 @@ $$=\frac{\sum\limits_{k=1}^G N_k(\overline{Y}_k-\overline{Y})^2}{G-1}\Bigg/\frac
 ### $\eta^2$
 
 $$\eta^2=\frac{Sum\ of\ Squares_{between}}{Sum\ of\ Squares_{total}}$$
+
+<br/>
+
+### ANOVA table
+
+| **source of variance** | **degrees of freedom** | **sum of squares** | **mean squares**   | ***F***-**statistic** | ***p***-**value** |
+|--------------------|--------------------|----------------|----------------|---------------|-----------|
+| **between groups**     | $df_b$     | $SS_b$ | $MS_b$ | $F$             | $p$         |
+| **within groups**      | $df_w$      | $SS_w$  | $MS_w$  | -             | -         |
+| **total**              | $df_t$       | $SS_t$   | -              | -             | -         |
+
+<br/>
+
+or
+
+| **source of variance** | **degrees of freedom** | **sum of squares** | **mean squares**   | ***F***-**statistic** | ***p***-**value** |
+|--------------------|--------------------|----------------|----------------|---------------|-----------|
+| **between groups**     | $G-1$     | $\sum\limits_{k=1}^G N_k(\overline{Y}_k-\overline{Y})^2$ | $MS_b=\frac{SS_b}{df_b}$ | $F=\frac{MS_b}{MS_w}$             | *complicated formula*         |
+| **within groups**      | $N-G$      | $\sum\limits_{k=1}^G\sum\limits_{i=1}^{N_k}(Y_{ik}-\overline{Y}_k)^2$  | $MS_w=\frac{SS_w}{df_w}$  | -             | -         |
+| **total**              | $df_b+df_w$       | $SS_b+SS_w$   | -              | -             | -         |
 
 <br/>
 
