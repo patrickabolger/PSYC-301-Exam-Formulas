@@ -51,3 +51,70 @@ $$CI_{95\%}=\overline{X}\pm \bigg(1.96 \times \frac{\sigma}{\sqrt{N}}\bigg)$$
 
 $$CI_{99\%}=\overline{X}\pm \bigg(2.58 \times \frac{\sigma}{\sqrt{N}}\bigg)$$
 
+## Exam 3
+
+<br/>
+
+### $\chi^2$
+
+$$\chi_{goodness\ of\ fit}^2=\sum_{i=1}^k \frac{(O_i-E_i)^2}{E_i}$$
+
+<br/>
+
+### Student's *t*-test
+
+$$t=\frac{\overline{x}_1-\overline{x}_2}{\sqrt{\left[\frac{(n_1-1)s_1^2+(n_2-1)s_2^2}{n_1+n_2-2}\right]\left[\frac{n_1+n_2}{n_1n_2}\right]}}$$
+<br/>
+
+### Cohen's *d*
+
+$$d=\frac{\bar{x}_1-\bar{x}_2}{\sqrt{\frac{s_1^2+s_2^2}{2}}}$$
+
+### *F*-ratio
+
+$$F=\frac{MS_{between}}{MS_{within}}=\frac{SS_b}{df_b}
+\bigg/\frac{SS_w}{df_w}=\frac{\sum\limits_{k=1}^G N_k(\overline{Y}_k-\overline{Y})^2}{G-1}\Bigg/\frac{\sum\limits_{k=1}^G\sum\limits_{i=1}^{N_k}(Y_{ik}-\overline{Y}_k)^2}{N-G}$$
+
+<br/>
+
+### $\eta^2$
+
+$$\eta^2=\frac{Sum\ of\ Squares_{between}}{Sum\ of\ Squares_{total}}$$
+
+<br/>
+
+### Pearson's *r*
+
+<br/>
+
+#### option 1
+
+$$r_{x,y}=\frac{\sum{z_{x_i}z_{y_i}}}{n-1}$$
+
+<br/>
+
+#### option 2
+
+$$r_{x,y}=\frac{n\Sigma XY-\Sigma X \Sigma Y}{\sqrt{[n\Sigma X^2-(\Sigma X)^2][n\Sigma Y^2-(\Sigma Y)^2]}}$$
+
+<br/>
+
+### Simple regression
+
+<br/>
+
+#### slope
+
+$$b=\frac{\sum{XY}-\Big(\big[\sum{X}\sum{Y}\big]/n\Big)}{\sum{X^2}-\Big[\big(\sum{X^2}/n\big)\Big]}$$
+
+<br/>
+
+#### intercept
+
+$$a=\frac{\sum{Y}-b\sum{X}}{n}$$
+
+<br/>
+
+#### residual
+
+$$y_i-\hat{y}$$
