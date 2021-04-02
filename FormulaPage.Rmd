@@ -72,8 +72,17 @@ $$d=\frac{\bar{x}_1-\bar{x}_2}{\sqrt{\frac{s_1^2+s_2^2}{2}}}$$
 
 ### *F*-ratio
 
-$$F=\frac{MS_{between}}{MS_{within}}=\frac{SS_b}{df_b}
-\bigg/\frac{SS_w}{df_w}=\frac{\sum\limits_{k=1}^G N_k(\overline{Y}_k-\overline{Y})^2}{G-1}\Bigg/\frac{\sum\limits_{k=1}^G\sum\limits_{i=1}^{N_k}(Y_{ik}-\overline{Y}_k)^2}{N-G}$$
+$$F=\frac{MS_{between}}{MS_{within}}$$
+
+<br/>
+
+
+$$=\frac{SS_b}{df_b}
+\bigg/\frac{SS_w}{df_w}$$
+
+<br/>
+
+$$=\frac{\sum\limits_{k=1}^G N_k(\overline{Y}_k-\overline{Y})^2}{G-1}\Bigg/\frac{\sum\limits_{k=1}^G\sum\limits_{i=1}^{N_k}(Y_{ik}-\overline{Y}_k)^2}{N-G}$$
 
 <br/>
 
