@@ -157,7 +157,7 @@ $$r_{x,y}=\frac{n\Sigma XY-\Sigma X \Sigma Y}{\sqrt{[n\Sigma X^2-(\Sigma X)^2][n
 
 #### slope
 
-$$b=\frac{\sum{XY}-\Big(\big[\sum{X}\sum{Y}\big]/n\Big)}{\sum{X^2}-\Big[\big(\sum{X^2}/n\big)\Big]}$$
+$$b=\frac{\sum{XY}-\Big(\big[\sum{X}\sum{Y}\big]/n\Big)}{\sum{X^2}-\Big[(\sum{X)^2}/n\Big]}$$
 
 <br/>
 
