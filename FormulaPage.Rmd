@@ -51,7 +51,7 @@ $$CI_{95\%}=\overline{X}\pm \bigg(1.96 \times \frac{\sigma}{\sqrt{N}}\bigg)$$
 
 $$CI_{99\%}=\overline{X}\pm \bigg(2.58 \times \frac{\sigma}{\sqrt{N}}\bigg)$$
 
-## Exam 3
+## New to Exam 3
 
 <br/>
 
@@ -170,3 +170,27 @@ $$a=\frac{\sum{Y}-b\sum{X}}{n}$$
 #### residual
 
 $$y_i-\hat{y}$$
+
+## New to Final Exam
+
+<br/>
+
+### Paired-samples *t*-test
+
+$$t=\frac{\sum{D}}{\sqrt{\frac{n\sum{D^2}-(\sum{D})^2}{n-1}}}$$
+<br/>
+
+which turns out to be the same as the following;
+<br/>
+
+$$t=\frac{\bar{D}}{s_D\big/\sqrt{n}}$$
+
+### Effect size for paired-samples *t*-test
+
+$$Cohen's\ d_z=\frac{\bar{x}_D}{s_D}$$
+
+<br/>
+
+which is the same as the following:
+
+$$Cohen's\ d_z=\frac{\bar{D}}{\hat{\sigma}_D}$$
