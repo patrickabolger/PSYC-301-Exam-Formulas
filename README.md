@@ -1,2 +1,2 @@
 # PSYC-301-Exam-Formulas
-These are formulas that my students can access during online statistics exams
+These are formulas and lookup tables that my students can access during online statistics exams
