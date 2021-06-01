@@ -2,7 +2,7 @@
 title: "PSYC 301 Exam Formulas"
 subtitle: "(scroll down for the exam you need)"
 author: "Patrick Bolger, PhD"
-date: "05 March 2021"
+date: "`r format(Sys.time(), '%d %B %Y')`"
 knit: (function(input_file, encoding) {
   out_dir <- 'docs';
   rmarkdown::render(input_file,
@@ -118,7 +118,7 @@ $$=\frac{\sum\limits_{k=1}^G N_k(\overline{Y}_k-\overline{Y})^2}{G-1}\Bigg/\frac
 
 <br/>
 
-## $\eta^2$
+### $\eta^2$
 
 $$\eta^2=\frac{Sum\ of\ Squares_{between}}{Sum\ of\ Squares_{total}}$$
 
@@ -148,13 +148,13 @@ or
 
 <br/>
 
-### option 1
+### using *z*-scores
 
 $$r_{x,y}=\frac{\sum{z_{x_i}z_{y_i}}}{n-1}$$
 
 <br/>
 
-### option 2
+### using raw scores only
 
 $$r_{x,y}=\frac{n\Sigma XY-\Sigma X \Sigma Y}{\sqrt{[n\Sigma X^2-(\Sigma X)^2][n\Sigma Y^2-(\Sigma Y)^2]}}$$
 
@@ -194,7 +194,7 @@ which turns out to be the same as the following;
 
 $$t=\frac{\bar{D}}{s_D\big/\sqrt{n}}$$
 
-## Effect size for paired-samples *t*-test
+### Cohen's $d_z$
 
 $$Cohen's\ d_z=\frac{\bar{x}_D}{s_D}$$
 
@@ -204,13 +204,11 @@ which is the same as the following:
 
 $$Cohen's\ d_z=\frac{\bar{D}}{\hat{\sigma}_D}$$
 
+---
+
+<br/><br/><br/>
+
 # Normal (*z*-) tables
-
-## *z*-table (leftward)
-
-**Directions**: To get any particular *z*-score, combine the value in the row in the left-most column (`First 2 digits of z-score`) with the appropriate value across the top of the rightward columns (`3rd digit of z-score`). For example, the area to the ***left*** of a *z*-score of `-1.25` would be found by finding the intersection of `-1.2` in the first column with the column labeled `0.05` across the top (this value is 0.1056).
-
-<br/>
 
 ```{r importZ, include=F}
 
@@ -246,25 +244,9 @@ zsketch <- htmltools::withTags(table(
 
 ```
 
-
-```{r zDisplayLeftward}
-
-DT::datatable(
-  ztable_leftward_filtered, 
-  container = zsketch,
-  rownames = FALSE,
-  extensions = 'KeyTable',
-  options = list(keys = TRUE),
-  caption = 
-  )
-
-```
-
-<br/>
-
 ## *z*-table (rightward)
 
-**Directions**: To get any particular *z*-score, combine the value in the row in the left-most column (`First 2 digits of z-score`) with the appropriate value across the top of the rightward columns (`3rd digit of z-score`). For example, the area to the ***right*** of a *z*-score of `-1.25` would be found by finding the intersection of `-1.2` in the first column with the column labeled `0.05` across the top (This value is 0.8944).
+**Directions**: To get any particular *z*-score, combine the value in the row in the left-most column (`First 2 digits of z-score`) with the appropriate value across the top of the rightward columns (`3rd digit of z-score`). For example, the area `to the right` of a *z*-score of `-1.25` would be found by finding the intersection of `-1.2` in the first column with the column labeled `0.05` across the top (This value is 0.8944).
 
 <br/>
 
@@ -279,6 +261,28 @@ DT::datatable(
   )
 
 ```
+<br/>
+
+## *z*-table (leftward)
+
+**Directions**: To get any particular *z*-score, combine the value in the row in the left-most column (`First 2 digits of z-score`) with the appropriate value across the top of the rightward columns (`3rd digit of z-score`). For example, the area `to the left` of a *z*-score of `-1.25` would be found by finding the intersection of `-1.2` in the first column with the column labeled `0.05` across the top (this value is 0.1056).
+
+<br/>
+
+```{r zDisplayLeftward}
+
+DT::datatable(
+  ztable_leftward_filtered, 
+  container = zsketch,
+  rownames = FALSE,
+  extensions = 'KeyTable',
+  options = list(keys = TRUE),
+  caption = 
+  )
+
+```
+
+---
 
 <br/>
 
@@ -319,6 +323,7 @@ DT::datatable(
 
 ```
 
+<br/>
 
 ## *t*-table
 
@@ -327,37 +332,6 @@ DT::datatable(
 ttable <- round(read_csv("tables/ttable.csv", col_types = cols()),4)
 
 ```
-
-### one-tailed
-
-
-```{r displayT1tail}
-
-tsketch1tail <- htmltools::withTags(table(
-  class = 'display',
-  thead(
-    tr(
-      th(rowspan = 2, 'degrees of freedom'),
-      th(colspan = 2, 'Alpha level'),
-    ),
-    tr(lapply(
-      c('.05', '.01'), th)
-      )
-    )
-  )
-)
-
-DT::datatable(
-  ttable[,c(1,4,6)], 
-  container = tsketch1tail,
-  rownames = FALSE,
-  extensions = 'KeyTable',
-  options = list(keys = TRUE)
-  )
-
-```
-
-<br/>
 
 ### two-tailed
 
@@ -382,7 +356,44 @@ DT::datatable(
   container = tsketch2tail,
   rownames = FALSE,
   extensions = 'KeyTable',
-  options = list(keys = TRUE)
+  options = list(keys = TRUE),
+  caption = htmltools::tags$caption(
+    style = 'caption-side: bottom; text-align: left;',
+    'The absolute bottommost row in this entire table represents infinite
+    degrees of freedom, or the Normal curve.')
+  )
+
+```
+
+<br/>
+
+### one-tailed
+
+```{r displayT1tail}
+
+tsketch1tail <- htmltools::withTags(table(
+  class = 'display',
+  thead(
+    tr(
+      th(rowspan = 2, 'degrees of freedom'),
+      th(colspan = 2, 'Alpha level'),
+    ),
+    tr(lapply(
+      c('.05', '.01'), th)
+      )
+    )
+  )
+)
+
+DT::datatable(
+  ttable[,c(1,4,6)], 
+  container = tsketch1tail,
+  rownames = FALSE,
+  extensions = 'KeyTable',
+  options = list(keys = TRUE),
+    caption = htmltools::tags$caption(
+    style = 'caption-side: bottom; text-align: left;',
+    'The absolute bottommost row in this entire table represents infinite degrees of freedom, or the Normal curve.')
   )
 
 ```
@@ -391,15 +402,15 @@ DT::datatable(
 
 ## *F*-table ($\alpha=.05$)
 
-```{r importF}
+```{r importF05}
 
-ftable <- round(read_csv("tables/ftable.csv", col_types = cols()),4)
+ftable05 <- round(read_csv("tables/ftable05.csv", col_types = cols()),4)
 
 ```
 
 
 
-```{r fDisplay}
+```{r f05Display}
 
 Fsketch <- htmltools::withTags(table(
   class = 'display',
@@ -417,7 +428,7 @@ Fsketch <- htmltools::withTags(table(
 )
 
 DT::datatable(
-  ftable, 
+  ftable05, 
   container = Fsketch,
   rownames = FALSE,
   extensions = 'KeyTable',
@@ -428,6 +439,32 @@ DT::datatable(
 ```
 
 <br/>
+
+## *F*-table ($\alpha=.01$)
+
+```{r importF01}
+
+ftable01 <- round(read_csv("tables/ftable01.csv", col_types = cols()),4)
+
+```
+
+
+
+```{r f01Display}
+
+DT::datatable(
+  ftable01, 
+  container = Fsketch,
+  rownames = FALSE,
+  extensions = 'KeyTable',
+  options = list(keys = TRUE),
+  caption = 
+  )
+
+```
+
+<br/>
+
 
 ## table for Pearson's *r*
 
