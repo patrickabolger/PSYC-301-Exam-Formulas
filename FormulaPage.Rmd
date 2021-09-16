@@ -1,6 +1,6 @@
 ---
-title: "PSYC 301 Exam Formulas"
-subtitle: "(scroll down for the exam you need)"
+title: "PSYC 301 Unit Formulas"
+subtitle: "(scroll down for the unit you need)"
 author: "Patrick Bolger, PhD"
 date: "`r format(Sys.time(), '%d %B %Y')`"
 knit: (function(input_file, encoding) {
@@ -29,9 +29,21 @@ pacman::p_load(readr, DT, dplyr)
 ```
 
 
-# Exam 1
+# Unit 1
 
 $$\overline{x}=\frac{1}{N}\sum_{i=1}^N x_i$$
+
+<br/>
+
+$$R=H-L$$
+
+<br/>
+
+$$IQR=Q3-Q1$$
+
+<br/>
+
+$$AAD=\frac{\sum|x_i-\overline{x}|}{n}$$
 
 <br/>
 
@@ -44,7 +56,7 @@ $$s^2=\frac{\sum(x_i-\overline{x})^2}{N-1}$$
 
 $$z_i=\frac{(x_i-\overline{x})}{s}$$
 
-# New to Exam 2
+# New to Unit 2
 
 $$x_i=z_i(s)+\overline{x}$$
 
@@ -60,7 +72,7 @@ $$CI_{95\%}=\overline{X}\pm \bigg(1.96 \times \frac{\sigma}{\sqrt{N}}\bigg)$$
 
 $$CI_{99\%}=\overline{X}\pm \bigg(2.58 \times \frac{\sigma}{\sqrt{N}}\bigg)$$
 
-# New to Exam 3
+# New to Unit 3
 
 <br/>
 
@@ -180,7 +192,7 @@ $$a=\frac{\sum{Y}-b\sum{X}}{n}$$
 
 $$y_i-\hat{y}$$
 
-# New to Final Exam
+# New to final unit
 
 <br/>
 
